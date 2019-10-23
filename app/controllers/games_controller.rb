@@ -9,4 +9,9 @@ class GamesController < ApplicationController
         game = Game.find(params['id'])
         render json: game
     end
+
+    def create
+        Game.create(player: params['player'], score: params['score'])
+    end
+
 end
